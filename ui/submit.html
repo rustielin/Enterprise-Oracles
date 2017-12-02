@@ -11,34 +11,8 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="./node_modules/web3/dist/web3.min.js"></script>
-		<script type="text/javascript">
-			if (typeof web3 !== 'undefined') {
-				web3 = new Web3(web3.currentProvider);
-			} else {
-				// set the provider you want from Web3.providers
-				web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
-			}
-			web3.eth.defaultAccount = web3.eth.accounts[0];
-			var address; 
-			var ABI = []; // get the reference 
-			var contract = web3.eth.contract(ABI).at(address);
 
 
-		</script>
-
-		<script>
-			$(document).ready(function() {
-				// auto fill 
-				if (typeof web3.eth.accounts[0] !== 'undefined') {
-					$("#account").val(web3.eth.accounts[0])
-				}
-			})
-
-		</script>
-
-	
-	
 	</head>
 
 	<body class="is-loading">
@@ -56,32 +30,13 @@
 						</header>
 
 						<hr/>
+								<h2>Submitted</h2>
 
 
-			
-						<form method="post" action="#">
-							<div class="field">
-								<!--<input type="text" name="account" id="account" placeholder="Ethereum Account Address" />-->
-								<textarea name="account" id="account">Ethereum Account Address</textarea>
-							</div>
-							<div class="field">
-								<input type="text" name="shipment" id="shipment" placeholder="Shipment Number" />
-							</div>
-							
-							<div class="field">
-								<input type="text" name="temp_hi" id="temp_hi" placeholder="Temperature High" />
-							</div>
-
-							<div class="field">
-								<input type="text" name="temp_lo" id="temp_lo" placeholder="Temperature Low" />
-							</div>
-				
-							<ul class="actions">
-								<li><a href="submit.html" class="button">Submit</a></li>
-							</ul>
-						</form>
 						<hr />
-
+							<ul class="actions">
+								<li><a href="index.html" class="button">Back</a></li>
+							</ul>
 	
 					</section>
 
